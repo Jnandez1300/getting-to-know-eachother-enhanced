@@ -51,11 +51,34 @@ body {
 </a>
      <h3>Fun Fact</h3>
       <p>I know how to work on carbureted engines.</p>
-      <head>// Defining a function
-function greet() {
-  console.log("Hello, world!");
+      .icon {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 50%;
+  transition: all 0.2s linear;
 }
-// Calling the function
-greet(); // Output: Hello, world!</head>
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.icon:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  animation: rotate 2s infinite linear;
+}
        </body>
 </html>
