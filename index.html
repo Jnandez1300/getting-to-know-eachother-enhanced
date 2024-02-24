@@ -79,5 +79,42 @@ body {background-color: #d8a291;}
 </a>
      <h3>Fun Fact</h3>
       <p>I know how to work on carbureted engines.</p>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plane Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky">
+    <div class="plane"></div>
+  </div>
+</body>
+</html>
+.sky {
+  background-color: #87CEEB; /* Sky Blue */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.plane {
+  width: 100px;
+  height: 50px;
+  background-image: url('plane.png'); /* Image of the plane */
+  background-size: contain;
+  position: relative;
+  animation: fly 5s linear infinite; /* Animation properties */
+}
+
+@keyframes fly {
+  0% {
+    left: -100px; /* Initial position of the plane */
+    transform: rotate(30deg); /* Initial rotation of the plane */
+  }
+  100% {
+    left: 100%; /* Final position of the plane */
+    transform: rotate(-30deg); /* Final rotation of the plane */
+  }
+}
 </body>
 </html>
