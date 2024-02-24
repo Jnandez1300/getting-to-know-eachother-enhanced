@@ -6,25 +6,27 @@
   <title>Change Color on Click</title>
   <style>
     /* Define initial color */
-    .color-change {
-      background-color: blue;
-      width: 100px;
-      height: 100px;
+    .title {
+      color: blue;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
-<div class="color-change" id="colorDiv"></div>
+
+<h1 class="title" id="title">Julian Hernandez</h1>
+
 <script>
   // Get the element
-  const colorDiv = document.getElementById('colorDiv');
- // Add click event listener
-  colorDiv.addEventListener('click', function() {
+  const title = document.getElementById('title');
+
+  // Add click event listener
+  title.addEventListener('click', function() {
     // Generate random color
     const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    // Change background color
-    colorDiv.style.backgroundColor = randomColor;
+    
+    // Change text color
+    title.style.color = randomColor;
   });
 </script>
 <style>
