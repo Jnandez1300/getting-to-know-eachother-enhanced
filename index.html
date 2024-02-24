@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Color on Click</title>
+  <style>
+    /* Define initial color */
+    .color-change {
+      background-color: blue;
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="color-change" id="colorDiv"></div>
+<script>
+  // Get the element
+  const colorDiv = document.getElementById('colorDiv');
+ // Add click event listener
+  colorDiv.addEventListener('click', function() {
+    // Generate random color
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    // Change background color
+    colorDiv.style.backgroundColor = randomColor;
+  });
+</script>
 <style>
 body {background-color: #d8a291;}
     font : Verdana 
